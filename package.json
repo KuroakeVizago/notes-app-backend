@@ -4,7 +4,8 @@
   "description": "A backend application practice using hapi",
   "main": "entry_point.js",
   "scripts": {
-    "main": "nodemon master/src/server_entry_point.js",
+    "main-release": "NODE_ENV=production node master/src/server_entry_point.js",
+    "main-debug": "nodemon master/src/server_entry_point.js",
     "lint": "eslint ./master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
