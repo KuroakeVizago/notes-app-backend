@@ -3,12 +3,11 @@ const notes = require("./notes");
 
 const addNoteHandler = (request, handler) => {
     
-    const { title, tags, body } = JSON.parse(request.payload);
+    const { title, tags, body } = request.payload;
 
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
     const updatedAt = createdAt;
-
 
     const cNote = { id, title, tags, body, createdAt, updatedAt };
 
@@ -40,7 +39,7 @@ const addNoteHandler = (request, handler) => {
         response.code(500);    
     }
 
-    return response;
+     return response;
 };
 
 const getAllNotesHandler = () => ({
